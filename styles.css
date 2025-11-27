@@ -1,0 +1,74 @@
+/* RESET BÁSICO: Garante que todos os navegadores comecem iguais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Essencial para layout responsivo */
+}
+
+/* ESTILOS GLOBAIS: Afeta todo o corpo do site */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Mude esta cor */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    background-color: #333; /* Mude esta cor */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ESTILO DO RODAPÉ */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd; /* Mude esta cor */
+    margin-top: 30px;
+}
+
+
+---------------------------
+
+.banner {
+    /* O segredo é o 'linear-g radient'. 
+       to right = a cor vai da esquerda para a direita.
+       As cores são códigos hexadecimais: #4a00e0 (Roxo) e #8e2de2 (Azul/Violeta) */
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    
+    /* Isso garante que o texto fique branco e centralizado */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Espaço em cima e embaixo */
+}
+
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Ou uma fonte mais quadrada se tiver */
+    text-transform: uppercase; /* Deixa tudo MAIÚSCULO automaticamente */
+    font-size: 4em; /* Tamanho gigante */
+    letter-spacing: 5px; /* Espaço entre as letras */
+    
+    /* O Pulo do Gato: Sombra Neon */
+    /* Sombra branca (0 0 10px) + Sombra Azul (0 0 20px) */
+    text-shadow: 0 0 10px #fff, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+}
+
+.botao-menu {
+    background-color: transparent; /* Fundo transparente para os inativos */
+    color: white;
+    border: 1px solid #00bcd4; /* Borda fina ciano */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Para o botão que está "Aceso" (como o INÍCIO na foto) */
+.botao-ativo {
+    background-color: #00bcd4; /* Fundo Ciano Preenchido */
+    color: #090B10; /* Texto escuro para dar contraste */
+    box-shadow: 0 0 15px #00bcd4; /* O brilho em volta do botão */
+    border: none;
+}
