@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Nebulosa</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Café Nebulosa | Artesanal com Atmosfera Futurista</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <header>
+    <div id="nav-container">
+      <nav id="menu-principal">
+        <a id="logo" href="index.html">Café Nebulosa</a>
+        
+        <div id="links-menu">
+          <a class="nav-link" href="#">Início</a>
+          <a class="nav-link" href="#">O Café</a>
+          <a class="nav-link" href="#">Menu</a>
+          <a class="nav-link" href="#">Contato</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
     
-    <header>
-        <h1>Café Nebulosa</h1>
-    </header>
+    <div id="banner-area">
+      <div class="banner-conteudo">
+        <h1>BEM-VINDO À NEBULOSA</h1>
+        <p id="mensagem-inicial">A experiência do café artesanal levada a outras dimensões.</p>
+        <button class="main-btn" onclick="mudarCorDoTexto()">Ver Menu de outra galaxya</button>
+      </div>
+    </div>
     
-    <main>
-        <p>Este é o corpo principal do seu novo site.</p>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 José Ricardo</p>
-    </footer>
+    <div id="about-area">
+      <div class="container-simples">
+        <h2>Sobre Nosso Café</h2>
+        <p>Nossos grãos são selecionados na galáxia, trazendo um sabor único e raro.</p>
+        <ul id="diferenciais">
+          <li>Experiência Futurista</li>
+          <li>Grãos Raros</li>
+          <li>Ambiente Aconchegante</li>
+          <li>Ingredientes secretos de lugares secretos</li>
 
-    <script src="script.js"></script>
-
+        </ul>
+      </div>
+    </div>
+    
+    <div id="contact-area">
+      <div class="container-simples">
+        <h2>Fale Conosco</h2>
+        <form id="contact-form">
+          <input type="text" placeholder="Seu E-mail">
+          <textarea placeholder="Sua Mensagem"></textarea>
+          <input type="submit" value="Enviar Mensagem" class="main-btn">
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div id="copy-area">
+      <p>Desenvolvido por José Ricardo &copy; 2025</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>

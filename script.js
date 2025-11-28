@@ -1,30 +1,39 @@
 // =========================================================
-// MÓDULO DE DEPURACÃO (DEBUG)
+// JS BÁSICO PARA PROJETOS DE INICIANTE (script.js)
 // =========================================================
 
-// Use console.log() para testar valores e verificar se o script está rodando
-console.log("O script.js foi carregado com sucesso!");
+// 1. CONFIRMAÇÃO DE CARREGAMENTO
+// Este comando é a primeira coisa que rodará. Use para verificar se o arquivo JS
+// está conectado corretamente ao seu HTML (use F12 para ver o console do navegador).
+console.log("Olá, José Ricardo! O script.js do Café Nebulosa foi carregado com sucesso.");
 
-// =========================================================
-// FUNÇÕES DE INTERAÇÃO (Adicione suas funções aqui)
-// =========================================================
 
-/**
- * Função de Exemplo que faz algo no clique de um botão.
- * Você pode apagar esta função se não for usá-la.
- */
-function cliqueDeExemplo() {
-    let elemento = document.getElementById("algum-id");
+// 2. FUNÇÃO DE INTERAÇÃO SIMPLES (CLIQUE NO BOTÃO)
+// Esta função é um exemplo de como fazer o site reagir a algo (como um clique).
+// Você precisará ter um botão no seu HTML com o atributo 'onclick="mudarCorDoTexto()"'
+function mudarCorDoTexto() {
+    // Encontra o elemento que tem o ID 'mensagem-inicial'
+    let elemento = document.getElementById("mensagem-inicial");
+    
+    // Verifica se o elemento foi encontrado para evitar erros
     if (elemento) {
-        elemento.innerHTML = "Texto alterado pelo JavaScript!";
+        // Altera a cor do texto para o laranja de destaque
+        elemento.style.color = "#FF9900"; 
+        
+        // Altera o texto do elemento
+        elemento.innerHTML = "O JavaScript alterou este texto e a cor!";
+        
+        console.log("Interação JS concluída.");
+    } else {
+        console.log("Erro: Elemento com ID 'mensagem-inicial' não encontrado.");
     }
 }
 
-// =========================================================
-// CÓDIGO INICIAL (Roda quando a página carrega)
-// =========================================================
 
-// Exemplo: Alerta ao usuário
-// window.onload = function() {
-//    alert("Bem-vindo ao meu novo projeto!");
-// };
+// 3. CÓDIGO QUE RODA APÓS O CARREGAMENTO TOTAL DA PÁGINA
+// Use esta estrutura se quiser que algo aconteça assim que a página estiver pronta.
+window.onload = function() {
+    console.log("A página está totalmente pronta para interação.");
+    // Exemplo: Você pode chamar a função 'mudarCorDoTexto()' aqui para rodar
+    // automaticamente no carregamento, se quiser.
+};

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contato | Café Nebulosa</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <div id="nav-container">
+      <nav id="menu-principal">
+        <a id="logo" href="index.html">Café Nebulosa</a>
+        
+        <div id="links-menu">
+          <a class="nav-link" href="index.html">Início</a>
+          <a class="nav-link" href="about.html">O Café</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="contatos.html" id="contact-link">Contato</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div id="contact-area" class="container-simples">
+        <h1 class="main-title">Fale com a Frota Estelar!</h1>
+        <p class="sub-title">Envie sua mensagem e retornaremos o mais rápido possível.</p>
+
+        <form id="contact-form" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: José Ricardo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Seu Melhor E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Ex: alves@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Ex: Pedido de Orçamento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..."></textarea>
+            </div>
+
+            <input type="submit" value="Enviar Comunicação" class="main-btn">
+        </form>
+
+    </div>
+  </main>
+  
+  <footer>
+    <div id="copy-area">
+      <p>Desenvolvido por José Ricardo &copy; 2025</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

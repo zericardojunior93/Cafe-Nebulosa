@@ -1,74 +1,210 @@
-/* RESET BÁSICO: Garante que todos os navegadores comecem iguais */
+/* ========================================================= */
+/* 1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS */
+/* ========================================================= */
+
+/* O asterisco (*) afeta TODOS os elementos. */
+/* Garante que o padding e a margem comecem do zero em todos os navegadores. */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Essencial para layout responsivo */
+    /* Essencial: garante que padding/border não aumentem o tamanho total do elemento */
+    box-sizing: border-box; 
 }
 
-/* ESTILOS GLOBAIS: Afeta todo o corpo do site */
+/* Aplica o tema escuro e a fonte principal em todo o site (BODY) */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0; /* Mude esta cor */
-    color: #333; /* Cor padrão do texto */
+    background-color: #222222; /* Cor de Fundo Principal (Quase Preto) */
+    color: #FFFFFF; /* Cor Padrão do Texto (Branco) */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
 }
 
-/* ESTILO DO CABEÇALHO */
+/* ========================================================= */
+/* 2. ESTILIZAÇÃO DO CABEÇALHO (HEADER E MENU) */
+/* ========================================================= */
+
 header {
-    background-color: #333; /* Mude esta cor */
-    color: white;
+    background-color: #303030; /* Fundo Secundário Escuro para o topo */
+    padding: 15px 0;
+    /* Linha de Destaque Laranja/Amarelo na parte inferior do cabeçalho */
+    border-bottom: 4px solid #FF9900; 
+    text-align: center; /* Centraliza o conteúdo (logo e menu) */
+}
+
+/* Estiliza o logo (ou nome do site) no cabeçalho */
+#logo {
+    color: #FF9900; /* Cor Laranja/Amarelo Forte para o destaque */
+    font-size: 1.8em; /* Tamanho da fonte */
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-transform: uppercase;
+}
+
+/* ========================================================= */
+/* 3. ESTILIZAÇÃO DA SEÇÃO PRINCIPAL (EX: BANNER) */
+/* ========================================================= */
+
+#banner-area {
+    /* Usa a cor principal do body, mas você pode adicionar o degradê aqui */
+    /* background: linear-gradient(to right, #4a00e0, #8e2de2); */
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Estiliza o Título principal do Banner */
+#banner-area h1 {
+    color: #FF9900; /* Cor Laranja de Destaque */
+    font-size: 3em; 
+    letter-spacing: 5px; /* Aumenta o espaço entre as letras */
+    text-transform: uppercase;
+    
+    /* Brilho: Sombra de texto (Neon) */
+    text-shadow: 0 0 5px #FF9900, 0 0 10px #FF9900;
+}
+
+
+/* ========================================================= */
+/* 4. ESTILIZAÇÃO DOS BOTÕES E ELEMENTOS DE AÇÃO */
+/* ========================================================= */
+
+/* Estilo geral para todos os botões com a classe 'main-btn' */
+.main-btn {
+    background-color: #FF9900; /* Cor de fundo Laranja */
+    color: #303030; /* Cor do texto escuro no botão (alto contraste) */
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Estilo para quando o mouse passar por cima do botão */
+.main-btn:hover {
+    /* Escurece ou muda o brilho levemente */
+    background-color: #e68a00; 
+}
+
+/* ========================================================= */
+/* 5. RODAPÉ (FOOTER) */
+/* ========================================================= */
+
+footer {
+    background-color: #303030; /* Fundo Secundário Escuro */
     padding: 20px 0;
     text-align: center;
+    margin-top: 50px;
 }
 
-/* ESTILO DO RODAPÉ */
-footer {
+/* style.css (adicione no final) */
+
+/* ========================================================= */
+/* 6. ESTILIZAÇÃO DA PÁGINA DE MENU */
+/* ========================================================= */
+
+.container-simples {
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    margin: 0 auto; /* Centraliza a caixa na tela */
+    padding: 20px;
+}
+
+.sub-title {
     text-align: center;
-    padding: 10px;
-    background-color: #ddd; /* Mude esta cor */
+    color: #999; /* Cor cinza sutil */
+    margin-bottom: 40px;
+}
+
+.menu-section h2 {
+    color: #FF9900; /* Laranja de destaque */
+    border-bottom: 2px solid #303030;
+    padding-bottom: 10px;
     margin-top: 30px;
-}
-
-
----------------------------
-
-.banner {
-    /* O segredo é o 'linear-g radient'. 
-       to right = a cor vai da esquerda para a direita.
-       As cores são códigos hexadecimais: #4a00e0 (Roxo) e #8e2de2 (Azul/Violeta) */
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
-    
-    /* Isso garante que o texto fique branco e centralizado */
-    color: white;
-    text-align: center;
-    padding: 50px 0; /* Espaço em cima e embaixo */
-}
-
-
-h1 {
-    font-family: 'Arial', sans-serif; /* Ou uma fonte mais quadrada se tiver */
-    text-transform: uppercase; /* Deixa tudo MAIÚSCULO automaticamente */
-    font-size: 4em; /* Tamanho gigante */
-    letter-spacing: 5px; /* Espaço entre as letras */
-    
-    /* O Pulo do Gato: Sombra Neon */
-    /* Sombra branca (0 0 10px) + Sombra Azul (0 0 20px) */
-    text-shadow: 0 0 10px #fff, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
-}
-
-.botao-menu {
-    background-color: transparent; /* Fundo transparente para os inativos */
-    color: white;
-    border: 1px solid #00bcd4; /* Borda fina ciano */
-    padding: 10px 20px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
-/* Para o botão que está "Aceso" (como o INÍCIO na foto) */
-.botao-ativo {
-    background-color: #00bcd4; /* Fundo Ciano Preenchido */
-    color: #090B10; /* Texto escuro para dar contraste */
-    box-shadow: 0 0 15px #00bcd4; /* O brilho em volta do botão */
-    border: none;
+.menu-item {
+    border: 1px solid #303030; /* Borda sutil */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #282828; /* Fundo ligeiramente mais claro que o body */
+}
+
+.item-nome {
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-block;
+    width: 65%;
+}
+
+.item-preco {
+    float: right; /* Alinha o preço na direita */
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #00bcd4; /* Cor Ciano/Verde para o preço (destaque) */
+}
+
+.item-desc {
+    color: #ccc; /* Cor da descrição mais clara */
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Limpa o float para que o próximo item não suba */
+.menu-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* style.css (adicione no final) */
+
+/* ========================================================= */
+/* 7. ESTILIZAÇÃO DO FORMULÁRIO DE CONTATO */
+/* ========================================================= */
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #303030; /* Fundo ligeiramente mais claro */
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* Garante que o label ocupe uma linha inteira */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FF9900; /* Destaque Neon para os rótulos */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #222222; /* Fundo do campo bem escuro */
+    color: #FFFFFF;
+    border: 1px solid #555;
+    border-radius: 4px;
+    /* Efeito de foco neon ao clicar */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #FF9900; /* Borda laranja quando estiver digitando */
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar apenas na vertical */
 }
