@@ -49,8 +49,10 @@ header {
     /* background: linear-gradient(to right, #4a00e0, #8e2de2); */
     padding: 80px 0;
     text-align: center;
+    /*eu mesmo fiz um ajuste aqui pra adicionar um banner */
+    background-image: url('img/banner.jpeg');
 }
-
+    
 /* Estiliza o Título principal do Banner */
 #banner-area h1 {
     color: #FF9900; /* Cor Laranja de Destaque */
@@ -207,4 +209,23 @@ textarea:focus {
 
 textarea {
     resize: vertical; /* Permite redimensionar apenas na vertical */
+}
+
+/* style.css */
+
+#produtos-destaque {
+    /* 1. Largura máxima para não ficar muito largo */
+    max-width: 1000px; 
+    
+    /* 2. CENTRALIZAÇÃO: Zera margem de cima/baixo e usa 'auto' nas laterais */
+    margin: 0 auto; 
+    
+    /* 3. Espaçamento interno para não colar nas bordas */
+    padding: 60px 20px; 
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+#produtos-destaque h2 {
+    color: #FF9900; 
+    margin-bottom: 30px;
 }
