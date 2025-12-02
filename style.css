@@ -229,3 +229,28 @@ textarea {
     color: #FF9900; 
     margin-bottom: 30px;
 }
+
+/* Este comando agora inclui o seletor p, garantindo que 
+TODOS os H1, H2 e Parágrafos tenham 25px de espaço abaixo deles.
+*/
+h1, h2, p {
+    /* Define o espaçamento ABAIXO de cada um desses elementos */
+    margin-bottom: 25px; 
+}
+
+/* Os parágrafos (p) também terão o espaçamento aplicado: */
+p {
+    /* Estilos específicos para o texto (opcional) */
+    line-height: 1.6; /* Aumenta a altura da linha para melhor leitura */
+    color: #CCCCCC;
+}
+
+.lista-cards {
+    display: flex; /* Comando para colocá-los em linha */
+    justify-content: space-between; /* Distribui o espaço entre eles */
+    /* Outras regras como espaçamento superior, se precisar */
+}
+.foto-produto {
+    border-radius: 10px; /* Arredonda */
+    /
+}
