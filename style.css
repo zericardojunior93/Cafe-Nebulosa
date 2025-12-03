@@ -1,79 +1,80 @@
-/* ========================================================= */
-/* 1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS */
-/* ========================================================= */
-
-/* O asterisco (*) afeta TODOS os elementos. */
-/* Garante que o padding e a margem comecem do zero em todos os navegadores. */
+/* Isso aqui é pra limpar tudo. Zera margem e padding de todo o site (*) */
 * {
     margin: 0;
     padding: 0;
-    /* Essencial: garante que padding/border não aumentem o tamanho total do elemento */
+    /* Faz o padding e a borda não quebrarem o tamanho da caixa. SALVA VIDAS! */
     box-sizing: border-box; 
 }
 
-/* Aplica o tema escuro e a fonte principal em todo o site (BODY) */
+/* Configura o fundo escuro e a fonte principal do site todo (body) */
 body {
-    background-color: #222222; /* Cor de Fundo Principal (Quase Preto) */
-    color: #FFFFFF; /* Cor Padrão do Texto (Branco) */
+    background-color: #222222; /* Fundo escuro */
+    color: #FFFFFF; /* Letra branca */
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    /* Espaço maior entre as linhas pra facilitar a leitura (1.6 é bom) */
+    line-height: 1.6; 
 }
 
-/* ========================================================= */
-/* 2. ESTILIZAÇÃO DO CABEÇALHO (HEADER E MENU) */
-/* ========================================================= */
-
+/* Estilo do cabeçalho */
 header {
-    background-color: #303030; /* Fundo Secundário Escuro para o topo */
+    background-color: #303030; 
     padding: 15px 0;
-    /* Linha de Destaque Laranja/Amarelo na parte inferior do cabeçalho */
+    /* A linha laranja que fica embaixo do cabeçalho pra dar um destaque */
     border-bottom: 4px solid #FF9900; 
-    text-align: center; /* Centraliza o conteúdo (logo e menu) */
+    text-align: center; 
 }
 
-/* Estiliza o logo (ou nome do site) no cabeçalho */
+/* Estilizando o nome do site (o logo) */
 #logo {
-    color: #FF9900; /* Cor Laranja/Amarelo Forte para o destaque */
-    font-size: 1.8em; /* Tamanho da fonte */
+    color: #FF9900; 
+    font-size: 1.8em; 
     font-weight: bold;
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-decoration: none; 
     text-transform: uppercase;
 }
 
-/* ========================================================= */
-/* 3. ESTILIZAÇÃO DA SEÇÃO PRINCIPAL (EX: BANNER) */
-/* ========================================================= */
-
+/* Estilo da seção principal (EX: BANNER) */
 #banner-area {
-    /* Usa a cor principal do body, mas você pode adicionar o degradê aqui */
-    /* background: linear-gradient(to right, #4a00e0, #8e2de2); */
     padding: 80px 0;
     text-align: center;
-    /*eu mesmo fiz um ajuste aqui pra adicionar um banner */
+    /* Aqui tem a imagem de fundo que eu coloquei */
     background-image: url('img/banner.jpeg');
 
 }
     
-/* Estiliza o Título principal do Banner */
+/* Estilo do título que fica no banner */
 #banner-area h1 {
-    color: #FF9900; /* Cor Laranja de Destaque */
+    color: #FF9900; 
     font-size: 3em; 
-    letter-spacing: 5px; /* Aumenta o espaço entre as letras */
+    letter-spacing: 5px; 
     text-transform: uppercase;
     
-    /* Brilho: Sombra de texto (Neon) */
+    /* Faz o texto brilhar igual neon, com sombra laranja */
     text-shadow: 0 0 5px #FF9900, 0 0 10px #FF9900;
 }
 
+/* Estilo do Banner - Correção do bug da imagem cortada */
+#banner-principal {
+    /* Altura que a caixa do banner vai ter na tela */
+    height: 450px; 
+    
+    /* Puxa a imagem de fundo */
+    background-image: url('img/banner.jpeg'); 
+    
+    /* Pra imagem não ficar se repetindo */
+    background-repeat: no-repeat;
+    
+    /* Isso faz a imagem INTEIRA caber na caixa de 450px sem cortar nada! */
+    background-size: contain; 
+    
+    /* Centraliza a imagem no meio da tela */
+    background-position: center center; 
+}
 
-/* ========================================================= */
-/* 4. ESTILIZAÇÃO DOS BOTÕES E ELEMENTOS DE AÇÃO */
-/* ========================================================= */
-
-/* Estilo geral para todos os botões com a classe 'main-btn' */
+/* Estilo dos Botões */
 .main-btn {
-    background-color: #FF9900; /* Cor de fundo Laranja */
-    color: #303030; /* Cor do texto escuro no botão (alto contraste) */
+    background-color: #FF9900; 
+    color: #303030; 
     padding: 10px 25px;
     border: none;
     border-radius: 4px;
@@ -83,43 +84,34 @@ header {
     text-decoration: none;
 }
 
-/* Estilo para quando o mouse passar por cima do botão */
+/* Efeito quando o mouse passa em cima */
 .main-btn:hover {
-    /* Escurece ou muda o brilho levemente */
     background-color: #e68a00; 
 }
 
-/* ========================================================= */
-/* 5. RODAPÉ (FOOTER) */
-/* ========================================================= */
-
+/* Estilo do Rodapé */
 footer {
-    background-color: #303030; /* Fundo Secundário Escuro */
+    background-color: #303030; 
     padding: 20px 0;
     text-align: center;
     margin-top: 50px;
 }
 
-/* style.css (adicione no final) */
-
-/* ========================================================= */
-/* 6. ESTILIZAÇÃO DA PÁGINA DE MENU */
-/* ========================================================= */
-
+/* Estilo da página de menu e outros templates */
 .container-simples {
-    max-width: 800px; /* Limita a largura para melhor leitura */
-    margin: 0 auto; /* Centraliza a caixa na tela */
+    max-width: 800px; 
+    margin: 0 auto; /* Centraliza o bloco na tela */
     padding: 20px;
 }
 
 .sub-title {
     text-align: center;
-    color: #999; /* Cor cinza sutil */
+    color: #999; 
     margin-bottom: 40px;
 }
 
 .menu-section h2 {
-    color: #FF9900; /* Laranja de destaque */
+    color: #FF9900; 
     border-bottom: 2px solid #303030;
     padding-bottom: 10px;
     margin-top: 30px;
@@ -128,11 +120,11 @@ footer {
 }
 
 .menu-item {
-    border: 1px solid #303030; /* Borda sutil */
+    border: 1px solid #303030; 
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
-    background-color: #282828; /* Fundo ligeiramente mais claro que o body */
+    background-color: #282828; 
 }
 
 .item-nome {
@@ -143,36 +135,31 @@ footer {
 }
 
 .item-preco {
-    float: right; /* Alinha o preço na direita */
+    float: right; /* Joga o preço para a direita */
     font-size: 1.3em;
     font-weight: bold;
-    color: #00bcd4; /* Cor Ciano/Verde para o preço (destaque) */
+    color: #00bcd4; 
 }
 
 .item-desc {
-    color: #ccc; /* Cor da descrição mais clara */
+    color: #ccc; 
     margin-top: 5px;
     font-size: 0.9em;
 }
 
-/* Limpa o float para que o próximo item não suba */
+/* Truque pra fazer a caixa do item fechar direito depois do float */
 .menu-item::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* style.css (adicione no final) */
-
-/* ========================================================= */
-/* 7. ESTILIZAÇÃO DO FORMULÁRIO DE CONTATO */
-/* ========================================================= */
-
+/* Estilo do Formulário de Contato */
 #contact-form {
     max-width: 500px;
-    margin: 0 auto; /* Centraliza o formulário */
+    margin: 0 auto; 
     padding: 20px;
-    background-color: #303030; /* Fundo ligeiramente mais claro */
+    background-color: #303030; 
     border-radius: 8px;
     border: 1px solid #444;
 }
@@ -182,10 +169,10 @@ footer {
 }
 
 label {
-    display: block; /* Garante que o label ocupe uma linha inteira */
+    display: block; 
     margin-bottom: 5px;
     font-weight: bold;
-    color: #FF9900; /* Destaque Neon para os rótulos */
+    color: #FF9900; 
 }
 
 input[type="text"],
@@ -193,37 +180,31 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    background-color: #222222; /* Fundo do campo bem escuro */
+    background-color: #222222; 
     color: #FFFFFF;
     border: 1px solid #555;
     border-radius: 4px;
-    /* Efeito de foco neon ao clicar */
     transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #FF9900; /* Borda laranja quando estiver digitando */
-    outline: none; /* Remove a borda padrão do navegador */
+    border-color: #FF9900; 
+    outline: none; 
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionar apenas na vertical */
+    resize: vertical; 
 }
 
-/* style.css */
-
+/* Estilo da Seção de Destaques e Cards */
 #produtos-destaque {
-    /* 1. Largura máxima para não ficar muito largo */
+    /* Limita o tamanho e centraliza na tela */
     max-width: 1000px; 
-    
-    /* 2. CENTRALIZAÇÃO: Zera margem de cima/baixo e usa 'auto' nas laterais */
     margin: 0 auto; 
-    
-    /* 3. Espaçamento interno para não colar nas bordas */
     padding: 60px 20px; 
-    text-align: center; /* Centraliza o texto dentro da caixa */
+    text-align: center; 
 }
 
 #produtos-destaque h2 {
@@ -231,41 +212,36 @@ textarea {
     margin-bottom: 30px;
 }
 
-/* Este comando agora inclui o seletor p, garantindo que 
-TODOS os H1, H2 e Parágrafos tenham 25px de espaço abaixo deles.
-*/
-h1, p, button {
-    /* Define o espaçamento ABAIXO de cada um desses elementos */
+/* Espaçamento (o pulo de linha) pra Títulos e Parágrafos */
+h1, h2, p {
+    /* Deixa 25px de espaço em baixo de cada um */
     margin-bottom: 25px; 
 }
 
-/* Os parágrafos (p) também terão o espaçamento aplicado: */
+/* Estilo do texto dos parágrafos */
 p {
-    /* Estilos específicos para o texto (opcional) */
-    line-height: 1.6; /* Aumenta a altura da linha para melhor leitura */
+    line-height: 1.6; 
     color: #ffffff;
 }
 
+/* Caixa que segura os 3 cards e usa Flexbox */
 .lista-cards {
-    display: flex; /* Comando para colocá-los em linha */
-    justify-content: space-between; /* Distribui o espaço entre eles */
-    /* Outras regras como espaçamento superior, se precisar */
-}
-.foto-produto {
-    border-radius: 58px; /* Arredonda */
-    /
-
-    
+    /* O comando mágico pra colocar os 3 cards um do lado do outro */
+    display: flex; 
+    /* Distribui o espaço pra eles não ficarem grudados */
+    justify-content: space-between; 
 }
 
+/* Imagem do Produto - ARRUMANDO O TAMANHO PRA NÃO FICAR TORTA */
 .card-produto img {
-    /* aqui eu defini que as imagens devem ficar todas nesse tamanho */
+    /* Força todas as imagens a ficarem nesse tamanho igual */
     width: 250px; 
     height: 250px; 
    
-    /*pra imagem nao ficar distorcida esse codigo preenche o espaco pelo o que eu entendi*/
+    /* Faz a imagem preencher o quadrado de 250x250, cortando o excesso, 
+       mas não deixando a imagem esticada (distorcida) */
     object-fit: cover; 
     
-    /* Arrendondamento porco pq nao funciona */
+    /* Arredonda só a parte de cima do cartão */
     border-radius: 10px 10px 0 0;
 }
