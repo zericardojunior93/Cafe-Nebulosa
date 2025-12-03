@@ -51,6 +51,7 @@ header {
     text-align: center;
     /*eu mesmo fiz um ajuste aqui pra adicionar um banner */
     background-image: url('img/banner.jpeg');
+
 }
     
 /* Estiliza o Título principal do Banner */
@@ -233,7 +234,7 @@ textarea {
 /* Este comando agora inclui o seletor p, garantindo que 
 TODOS os H1, H2 e Parágrafos tenham 25px de espaço abaixo deles.
 */
-h1, h2, p {
+h1, p, button {
     /* Define o espaçamento ABAIXO de cada um desses elementos */
     margin-bottom: 25px; 
 }
@@ -242,7 +243,7 @@ h1, h2, p {
 p {
     /* Estilos específicos para o texto (opcional) */
     line-height: 1.6; /* Aumenta a altura da linha para melhor leitura */
-    color: #CCCCCC;
+    color: #ffffff;
 }
 
 .lista-cards {
@@ -251,6 +252,20 @@ p {
     /* Outras regras como espaçamento superior, se precisar */
 }
 .foto-produto {
-    border-radius: 10px; /* Arredonda */
+    border-radius: 58px; /* Arredonda */
     /
+
+    
+}
+
+.card-produto img {
+    /* aqui eu defini que as imagens devem ficar todas nesse tamanho */
+    width: 250px; 
+    height: 250px; 
+   
+    /*pra imagem nao ficar distorcida esse codigo preenche o espaco pelo o que eu entendi*/
+    object-fit: cover; 
+    
+    /* Arrendondamento porco pq nao funciona */
+    border-radius: 10px 10px 0 0;
 }
