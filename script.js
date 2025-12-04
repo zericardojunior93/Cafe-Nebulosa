@@ -1,39 +1,34 @@
-// =========================================================
-// JS BÁSICO PARA PROJETOS DE INICIANTE (script.js)
-// =========================================================
+// O QUE EU FAÇO AQUI É SÓ PRA VER SE O ARQUIVO JS TÁ FUNCIONANDO
 
-// 1. CONFIRMAÇÃO DE CARREGAMENTO
-// Este comando é a primeira coisa que rodará. Use para verificar se o arquivo JS
-// está conectado corretamente ao seu HTML (use F12 para ver o console do navegador).
-console.log("Olá, José Ricardo! O script.js do Café Nebulosa foi carregado com sucesso.");
+// 1. CONFIRMAÇÃO SE O JS TÁ LIGADO
+// O primeiro comando a rodar. Se essa mensagem aparecer no F12 (Console), deu certo.
+console.log("Olá! O script.js do Café Nebulosa foi carregado com sucesso.");
 
 
-// 2. FUNÇÃO DE INTERAÇÃO SIMPLES (CLIQUE NO BOTÃO)
-// Esta função é um exemplo de como fazer o site reagir a algo (como um clique).
-// Você precisará ter um botão no seu HTML com o atributo 'onclick="mudarCorDoTexto()"'
+// 2. FUNÇÃO PARA FAZER O SITE REAGIR A UM CLIQUE
+// Eu chamo essa função (mudarCorDoTexto) quando alguém clicar em um botão específico no HTML.
 function mudarCorDoTexto() {
-    // Encontra o elemento que tem o ID 'mensagem-inicial'
+    // Procuro no HTML a caixa que tem o ID 'mensagem-inicial'
     let elemento = document.getElementById("mensagem-inicial");
     
-    // Verifica se o elemento foi encontrado para evitar erros
+    // Vejo se a caixa (elemento) existe pra não dar erro
     if (elemento) {
-        // Altera a cor do texto para o laranja de destaque
+        // Mudo a cor do texto da caixa pra laranja
         elemento.style.color = "#FF9900"; 
         
-        // Altera o texto do elemento
+        // Mudo o que está escrito dentro da caixa
         elemento.innerHTML = "O JavaScript alterou este texto e a cor!";
         
         console.log("Interação JS concluída.");
     } else {
-        console.log("Erro: Elemento com ID 'mensagem-inicial' não encontrado.");
+        console.log("Erro: Não achei a caixa com o ID 'mensagem-inicial'.");
     }
 }
 
 
-// 3. CÓDIGO QUE RODA APÓS O CARREGAMENTO TOTAL DA PÁGINA
-// Use esta estrutura se quiser que algo aconteça assim que a página estiver pronta.
+// 3. CÓDIGO QUE SÓ RODA DEPOIS QUE A PÁGINA TERMINA DE CARREGAR TUDO
+// Isso é pra garantir que o JS não tente mexer em uma caixa que ainda não apareceu na tela.
 window.onload = function() {
-    console.log("A página está totalmente pronta para interação.");
-    // Exemplo: Você pode chamar a função 'mudarCorDoTexto()' aqui para rodar
-    // automaticamente no carregamento, se quiser.
+    console.log("A página está totalmente pronta pra começar a interagir.");
+    // Exemplo: Se eu quisesse que a cor mudasse sozinha no início, eu chamaria a função aqui.
 };

@@ -8,25 +8,58 @@
 
 /* Configura o fundo escuro e a fonte principal do site todo (body) */
 body {
-    background-color: #222222; /* Fundo escuro */
-    color: #FFFFFF; /* Letra branca */
+    background-color: #010823; /* Fundo escuro */
+    color: #ffffffd0; /* Letra branca */
     font-family: 'Montserrat', sans-serif;
     /* Espaço maior entre as linhas pra facilitar a leitura (1.6 é bom) */
     line-height: 1.6; 
 }
 
+/* Isso aqui garante que todos os títulos h1 e h2 que não tiverem uma regra mais específica fiquem roxos */
+h1, h2 {
+    color: #a600ff;
+}
+
+/* Espaçamento (o pulo de linha) pra Títulos e Parágrafos */
+h1, h2, p {
+    /* Deixa 25px de espaço em baixo de cada um */
+    margin-bottom: 25px; 
+}
+
 /* Estilo do cabeçalho */
 header {
-    background-color: #303030; 
-    padding: 15px 0;
-    /* A linha laranja que fica embaixo do cabeçalho pra dar um destaque */
-    border-bottom: 4px solid #FF9900; 
+    background-color: #0d0f3c; 
+    padding: 4px 0;
+    /* A linha laranja que fica em  baixo do cabeçalho pra dar um destaque */
+    border-bottom: 2px solid #a600ff; 
     text-align: center; 
+}
+
+/* Estilo dos links de navegação (Nav Bar) */
+header nav a {
+    /* MÁGICA: Cor mais clara, um roxo neon suave que aparece no fundo escuro */
+    color: #db97ff; 
+    /* Coloca um espaço entre os links "Início Menu Sobre Contato" */
+    margin: 0 18px; 
+    /* Garante que o link se comporte como um bloco para o espaçamento funcionar */
+    display: inline-block;
+    /* Remove o sublinhado, mas podemos adicionar um efeito de hover */
+    text-decoration: none; 
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* Efeito quando o mouse passa por cima do link */
+header nav a:hover {
+    /* Fica branco puro ao passar o mouse para dar mais contraste */
+    color: #FFFFFF; 
+    /* Efeito de sublinhado que aparece no hover */
+    text-decoration: underline; 
 }
 
 /* Estilizando o nome do site (o logo) */
 #logo {
-    color: #FF9900; 
+    color: #a600ff; 
     font-size: 1.8em; 
     font-weight: bold;
     text-decoration: none; 
@@ -35,7 +68,7 @@ header {
 
 /* Estilo da seção principal (EX: BANNER) */
 #banner-area {
-    padding: 80px 0;
+    padding: 200px 0;
     text-align: center;
     /* Aqui tem a imagem de fundo que eu coloquei */
     background-image: url('img/banner.jpeg');
@@ -44,13 +77,13 @@ header {
     
 /* Estilo do título que fica no banner */
 #banner-area h1 {
-    color: #FF9900; 
+    color: #a600ff; 
     font-size: 3em; 
     letter-spacing: 5px; 
     text-transform: uppercase;
     
     /* Faz o texto brilhar igual neon, com sombra laranja */
-    text-shadow: 0 0 5px #FF9900, 0 0 10px #FF9900;
+    text-shadow: 0 0 50px #ff0000aa, 0 0 200px #000000;
 }
 
 /* Estilo do Banner - Correção do bug da imagem cortada */
@@ -73,8 +106,8 @@ header {
 
 /* Estilo dos Botões */
 .main-btn {
-    background-color: #FF9900; 
-    color: #303030; 
+    background-color: #a600ff; 
+    color: #ffffff; 
     padding: 10px 25px;
     border: none;
     border-radius: 4px;
@@ -86,15 +119,16 @@ header {
 
 /* Efeito quando o mouse passa em cima */
 .main-btn:hover {
-    background-color: #e68a00; 
+    background-color: #a600ff96; 
 }
 
 /* Estilo do Rodapé */
 footer {
-    background-color: #303030; 
+    background-color: #000000; 
     padding: 20px 0;
     text-align: center;
     margin-top: 50px;
+    
 }
 
 /* Estilo da página de menu e outros templates */
@@ -106,13 +140,13 @@ footer {
 
 .sub-title {
     text-align: center;
-    color: #999; 
+    color: #c871f7; 
     margin-bottom: 40px;
 }
 
 .menu-section h2 {
-    color: #FF9900; 
-    border-bottom: 2px solid #303030;
+    color: #a600ff; 
+    border-bottom: 2px solid #a600ff;
     padding-bottom: 10px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -138,11 +172,11 @@ footer {
     float: right; /* Joga o preço para a direita */
     font-size: 1.3em;
     font-weight: bold;
-    color: #00bcd4; 
+    color: #a600ff; 
 }
 
 .item-desc {
-    color: #ccc; 
+    color: #ffffff; 
     margin-top: 5px;
     font-size: 0.9em;
 }
@@ -159,9 +193,9 @@ footer {
     max-width: 500px;
     margin: 0 auto; 
     padding: 20px;
-    background-color: #303030; 
+    background-color: #a600ff23; 
     border-radius: 8px;
-    border: 1px solid #444;
+    border: 1px solid #a600ff;
 }
 
 .form-group {
@@ -172,7 +206,7 @@ label {
     display: block; 
     margin-bottom: 5px;
     font-weight: bold;
-    color: #FF9900; 
+    color: #a106f4ee; 
 }
 
 input[type="text"],
@@ -181,8 +215,8 @@ textarea {
     width: 100%;
     padding: 10px;
     background-color: #222222; 
-    color: #FFFFFF;
-    border: 1px solid #555;
+    color: #ffffff;
+    border: 1px solid #a600ff;
     border-radius: 4px;
     transition: border-color 0.3s;
 }
@@ -190,7 +224,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #FF9900; 
+    border-color: #db97ff; 
     outline: none; 
 }
 
@@ -208,7 +242,7 @@ textarea {
 }
 
 #produtos-destaque h2 {
-    color: #FF9900; 
+    color: #a600ff; 
     margin-bottom: 30px;
 }
 
@@ -221,7 +255,7 @@ h1, h2, p {
 /* Estilo do texto dos parágrafos */
 p {
     line-height: 1.6; 
-    color: #ffffff;
+    color: #fffffff0;
 }
 
 /* Caixa que segura os 3 cards e usa Flexbox */
@@ -238,10 +272,10 @@ p {
     width: 250px; 
     height: 250px; 
    
-    /* Faz a imagem preencher o quadrado de 250x250, cortando o excesso, 
-       mas não deixando a imagem esticada (distorcida) */
+    /* Força a imagem a preencher o quadrado de 250x250, 
+       mantendo a proporção e cortando o excesso */
     object-fit: cover; 
     
-    /* Arredonda só a parte de cima do cartão */
-    border-radius: 10px 10px 0 0;
+    /*DEIXAR A IMAGEM REDONDA: */
+    border-radius: 50%; 
 }
