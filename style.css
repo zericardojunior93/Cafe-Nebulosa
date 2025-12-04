@@ -26,6 +26,11 @@ h1, h2, p {
     margin-bottom: 25px; 
 }
 
+/* Isso centraliza todos os títulos h1 em qualquer lugar do site. */
+h1 {
+    text-align: center;
+}
+
 /* Estilo do cabeçalho */
 header {
     background-color: #0d0f3c; 
@@ -33,7 +38,37 @@ header {
     /* A linha laranja que fica em  baixo do cabeçalho pra dar um destaque */
     border-bottom: 2px solid #a600ff; 
     text-align: center; 
+
+
+    /* COMANDO para alinhar os itens horizontalmente */
+    display: flex;
+    /* Coloca o logo na esquerda e os links na direita, com todo o espaço no meio */
+    justify-content: space-between;
+    /* Garante que o logo e os links fiquem centralizados verticalmente */
+    align-items: center;
+
+
+
+    /*comando para ajustar tamanho da foto da nav bar*/
+    #logo-img {
+    /* Define o tamanho da imagem (largura e altura iguais) */
+    width: 40px; 
+    height: 40px; 
+   
+    /* Força a imagem a preencher o espaço de 60x60 sem distorcer (corta o excesso) */
+    object-fit: cover; 
+    
+    /* Transforma o quadrado em um CÍRCULO PERFEITO */
+    border-radius: 50%; 
+    
+    /* Garante que a imagem fique em uma linha separada para o Flexbox funcionar bem */
+    display: block; 
+}   
+    
 }
+
+
+
 
 /* Estilo dos links de navegação (Nav Bar) */
 header nav a {
