@@ -189,11 +189,11 @@ footer {
 }
 
 .menu-item {
-    border: 1px solid #303030; 
+    border: 1px solid #a600ff; 
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
-    background-color: #282828; 
+    background-color: #1c002b9a; 
 }
 
 .item-nome {
@@ -228,7 +228,7 @@ footer {
     max-width: 500px;
     margin: 0 auto; 
     padding: 20px;
-    background-color: #a600ff23; 
+    background-color: #1c002b9a; 
     border-radius: 8px;
     border: 1px solid #a600ff;
 }
@@ -241,7 +241,7 @@ label {
     display: block; 
     margin-bottom: 5px;
     font-weight: bold;
-    color: #a106f4ee; 
+    color: #a600ff; 
 }
 
 input[type="text"],
@@ -249,7 +249,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    background-color: #222222; 
+    background-color: #28003e; 
     color: #ffffff;
     border: 1px solid #a600ff;
     border-radius: 4px;
@@ -313,4 +313,10 @@ p {
     
     /*DEIXAR A IMAGEM REDONDA: */
     border-radius: 50%; 
+}
+
+/* cards dos depoismentos */
+.destaque-cards {       
+    border: 1px solid #a600ff;
+
 }
